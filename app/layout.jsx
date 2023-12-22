@@ -1,4 +1,7 @@
 import '@styles/globals.css';
+import Nav from '@components/Nav';
+import Provider from '@components/Provider';
+
 export const metadata = {
     title: "GPTforum",
     description: "A Next.js application that allows Crud operations for sharing thoughts regarding GPT."
@@ -11,6 +14,7 @@ function RootLayout({children}) {
                     <div className='gradient'></div>
                 </div>
                     <main className="app">
+                        <Nav />
                         {children}
                     </main>
 

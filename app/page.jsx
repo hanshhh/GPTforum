@@ -11,6 +11,7 @@ function Home() {
             <p className="desc text-center">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui sapiente totam voluptates sed amet, possimus labore, hic aut sequi minus molestias deserunt maxime dolorem rat
             </p>
+            <Feed/>
         </section>
     )
 }
