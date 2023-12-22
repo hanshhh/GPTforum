@@ -10,6 +10,7 @@ function RootLayout({children}) {
     return (
         <html lang='en'>
             <body>
+                <Provider>
                 <div className='main'>
                     <div className='gradient'></div>
                 </div>
@@ -17,6 +18,8 @@ function RootLayout({children}) {
                         <Nav />
                         {children}
                     </main>
+
+                </Provider>
 
                
             </body>
