@@ -18,17 +18,25 @@ function Feed() {
     const [searchText, setSearchText] = useState("");
     const [posts, setPosts] = useState([]);
     const handleSearchChange = (e) => {
+        setSearchText(e.target.value)
 
     }
 
     useEffect(() => {
         const fetchPosts = async () => {
-            const response = await fetch('/api/prompt');
-            const data = await response.json();
-            setPosts(data)
+            const response = await fetch(`/api/prompt/?s=${searchText}`);
+            if (response.ok) {
+
+            
+                const data = await response.json();
+                setPosts(data)
+                console.log(data)
+            } else {
+                console.log(response)
+            }
         }
         fetchPosts();
-    }, [])
+    }, [searchText])
     return (
         <section className="feed">
             <form className="relative w-full flex-center">
