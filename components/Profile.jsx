@@ -1,3 +1,4 @@
+"use client"
 function Profile() {
     return (
         <div>
