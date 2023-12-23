@@ -7,11 +7,11 @@ function Form({type,
     return (
         <section className="w-full max-w-full flex-start flex-col">
             <h1 className="head_text text-left"><span className="blue_gradient">{type}</span> Post</h1>
-            <p className="desc text-left max-w-md">{type} Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem voluptatum dignissimos quaerat eligendi incidunt reiciendis cum consectetur officiis enim. Non!</p>
+            <p className="desc text-left max-w-md">{type} posts and prompts to share brilliant insights to the GPTForum Community! Contribute by providing some useful GPT context command or create a blog on the latest updates!</p>
             <form onSubmit={handleSubmit} className="mt-10 w-full max-w-2xl flex flex-col gap-7 glassmorphism">
                 <label htmlFor="">
                     <span className="font-satoshi font-semibold text-base text-gray-700">
-                        Your AI Prompt
+                        Your GPT POST
                     </span>
                     <textarea value={post.prompt} onChange={(e) => setPost({...post, prompt: e.target.value})} placeholder="Write new prompt here..." className="form_textarea"/>
 
