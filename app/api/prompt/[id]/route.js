@@ -27,12 +27,11 @@ export const PATCH = async (req, {params}) => {
         if (!existingPrompt) {
             return new Response("Prompt not found", {status: 404})
         }
-        if (prompt) {
-            existingPrompt.prompt = prompt;
-        }
-        if (tag) {
-            existingPrompt.tag = tag;
-        }
+
+        existingPrompt.prompt = prompt;
+
+
+        existingPrompt.tag = tag;
         await existingPrompt.save();
         return new Response(JSON.stringify(existingPrompt), {status: 200})
         
@@ -49,7 +48,7 @@ export const PATCH = async (req, {params}) => {
 export const DELETE = async (request, {params}) => {
     try {
         await connectToDB();
-        const existingPrompt = await Prompt.findByIdAndRemove(params.id);
+        const existingPrompt = await Prompt.findByIdAndDelete(params.id);
         return new Response("Prompt deleted successfully", {status: 200})
 
     } catch(error) {
