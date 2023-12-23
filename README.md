@@ -1,6 +1,32 @@
+# Next.js Application with Google OAuth2 & OpenAI Summarizer
+
+### Overview
+This application is a modern web platform built with Next.js 14, leveraging Google OAuth2 for authentication and incorporating OpenAI's advanced summarization capabilities. It supports CRUD (Create, Read, Update, Delete) operations for blogs and prompts, making it an ideal solution for content management and generation.
+
+### Features
+- Google OAuth2 Integration: Secure user authentication utilizing Google's OAuth2 protocol.
+- OpenAI Summarizer: Leverage OpenAI's API to provide summarization features for blog content.
+- CRUD Operations: Full support for creating, reading, updating, and deleting blog posts and prompts.
+- Next.js 14 & API Routes: Utilizes the latest features of Next.js, including the new api_router for efficient backend(MongoDB) functionality.
+- Responsive Design: Crafted to provide an optimal viewing experience across a wide range of devices.
+- Tailwind CSS: Leverage the powerful Tailwind CSS for responsiveness and modern looking.
+- Utilizing React Markdown and MD-editor for blog content customization.
+
+### Requirements
+- Include a .env file in the toplevel folder.
+  ```bash
+  GOOGLE_CLIENT_ID=your_google_client_id
+  GOOGLE_CLIENT_SECRET=your_google_client_secret
+  OPENAI_API_KEY=your_openai_api_key
+  MONGODB_URI=your_mongodb_uri
+  NEXTAUTH_URL=http://localhost:3000
+
+  ```
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
+
 
 First, run the development server:
 
