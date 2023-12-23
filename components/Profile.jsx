@@ -1,9 +1,9 @@
-"use client"
-function Profile() {
+import PromptCard from "./PromptCard";
+function Profile({name, desc, data, handleEdit, handleDelete}) {
     return (
-        <div>
-            Profile
-        </div>
+        <section className="w-full">
+            <h1>{name} Profile</h1>
+        </section>
     )
 }
 
